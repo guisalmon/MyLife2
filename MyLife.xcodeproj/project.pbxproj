@@ -16,6 +16,8 @@
 		AC3440F71ADFC05600BE57F0 /* MyLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3440F61ADFC05600BE57F0 /* MyLifeTests.swift */; };
 		AC3441011ADFC1C800BE57F0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AC3441001ADFC1C800BE57F0 /* .gitignore */; };
 		AC3441031ADFC62F00BE57F0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3441021ADFC62F00BE57F0 /* libsqlite3.dylib */; };
+		AC34410C1ADFD55600BE57F0 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34410B1ADFD55600BE57F0 /* Foo.swift */; };
+		AC34410E1ADFD5FF00BE57F0 /* SD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34410D1ADFD5FF00BE57F0 /* SD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		AC3440F61ADFC05600BE57F0 /* MyLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLifeTests.swift; sourceTree = "<group>"; };
 		AC3441001ADFC1C800BE57F0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		AC3441021ADFC62F00BE57F0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AC3441041ADFCF3D00BE57F0 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		AC34410B1ADFD55600BE57F0 /* Foo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
+		AC34410D1ADFD5FF00BE57F0 /* SD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +71,7 @@
 		AC3440CF1ADFC05600BE57F0 = {
 			isa = PBXGroup;
 			children = (
+				AC3441051ADFCF9900BE57F0 /* lib */,
 				AC3441021ADFC62F00BE57F0 /* libsqlite3.dylib */,
 				AC3441001ADFC1C800BE57F0 /* .gitignore */,
 				AC3440DA1ADFC05600BE57F0 /* MyLife */,
@@ -93,6 +99,9 @@
 				AC3440E91ADFC05600BE57F0 /* LaunchScreen.xib */,
 				AC3440DF1ADFC05600BE57F0 /* MyLife.xcdatamodeld */,
 				AC3440DB1ADFC05600BE57F0 /* Supporting Files */,
+				AC3441041ADFCF3D00BE57F0 /* BridgingHeader.h */,
+				AC34410B1ADFD55600BE57F0 /* Foo.swift */,
+				AC34410D1ADFD5FF00BE57F0 /* SD.swift */,
 			);
 			path = MyLife;
 			sourceTree = "<group>";
@@ -120,6 +129,13 @@
 				AC3440F51ADFC05600BE57F0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC3441051ADFCF9900BE57F0 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC34410C1ADFD55600BE57F0 /* Foo.swift in Sources */,
 				AC3440E31ADFC05600BE57F0 /* ViewController.swift in Sources */,
 				AC3440DE1ADFC05600BE57F0 /* AppDelegate.swift in Sources */,
+				AC34410E1ADFD5FF00BE57F0 /* SD.swift in Sources */,
 				AC3440E11ADFC05600BE57F0 /* MyLife.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,8 +371,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MyLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[sdk=iphoneos*]" = MyLife/BridgingHeader.h;
 			};
 			name = Debug;
 		};
@@ -364,6 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MyLife/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -422,6 +443,7 @@
 				AC3440FC1ADFC05600BE57F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC3440FD1ADFC05600BE57F0 /* Build configuration list for PBXNativeTarget "MyLifeTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +452,7 @@
 				AC3440FF1ADFC05600BE57F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
