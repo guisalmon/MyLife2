@@ -15,6 +15,7 @@
 		AC3440EB1ADFC05600BE57F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3440E91ADFC05600BE57F0 /* LaunchScreen.xib */; };
 		AC3440F71ADFC05600BE57F0 /* MyLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3440F61ADFC05600BE57F0 /* MyLifeTests.swift */; };
 		AC3441011ADFC1C800BE57F0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AC3441001ADFC1C800BE57F0 /* .gitignore */; };
+		AC3441031ADFC62F00BE57F0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3441021ADFC62F00BE57F0 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		AC3440F51ADFC05600BE57F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC3440F61ADFC05600BE57F0 /* MyLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLifeTests.swift; sourceTree = "<group>"; };
 		AC3441001ADFC1C800BE57F0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		AC3441021ADFC62F00BE57F0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3441031ADFC62F00BE57F0 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		AC3440CF1ADFC05600BE57F0 = {
 			isa = PBXGroup;
 			children = (
+				AC3441021ADFC62F00BE57F0 /* libsqlite3.dylib */,
 				AC3441001ADFC1C800BE57F0 /* .gitignore */,
 				AC3440DA1ADFC05600BE57F0 /* MyLife */,
 				AC3440F31ADFC05600BE57F0 /* MyLifeTests */,
