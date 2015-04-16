@@ -14,6 +14,7 @@
 		AC3440E81ADFC05600BE57F0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3440E71ADFC05600BE57F0 /* Images.xcassets */; };
 		AC3440EB1ADFC05600BE57F0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3440E91ADFC05600BE57F0 /* LaunchScreen.xib */; };
 		AC3440F71ADFC05600BE57F0 /* MyLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3440F61ADFC05600BE57F0 /* MyLifeTests.swift */; };
+		AC3441011ADFC1C800BE57F0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AC3441001ADFC1C800BE57F0 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		AC3440F01ADFC05600BE57F0 /* MyLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3440F51ADFC05600BE57F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC3440F61ADFC05600BE57F0 /* MyLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLifeTests.swift; sourceTree = "<group>"; };
+		AC3441001ADFC1C800BE57F0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		AC3440CF1ADFC05600BE57F0 = {
 			isa = PBXGroup;
 			children = (
+				AC3441001ADFC1C800BE57F0 /* .gitignore */,
 				AC3440DA1ADFC05600BE57F0 /* MyLife */,
 				AC3440F31ADFC05600BE57F0 /* MyLifeTests */,
 				AC3440D91ADFC05600BE57F0 /* Products */,
@@ -164,6 +167,7 @@
 				TargetAttributes = {
 					AC3440D71ADFC05600BE57F0 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = U57N7PPXA4;
 					};
 					AC3440EF1ADFC05600BE57F0 = {
 						CreatedOnToolsVersion = 6.2;
@@ -195,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3441011ADFC1C800BE57F0 /* .gitignore in Resources */,
 				AC3440E61ADFC05600BE57F0 /* Main.storyboard in Resources */,
 				AC3440EB1ADFC05600BE57F0 /* LaunchScreen.xib in Resources */,
 				AC3440E81ADFC05600BE57F0 /* Images.xcassets in Resources */,
@@ -342,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MyLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = MyLife/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
