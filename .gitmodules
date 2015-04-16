@@ -1,0 +1,3 @@
+[submodule "lib/swiftdata"]
+	path = lib/swiftdata
+	url = git@github.com:ryanfowler/SwiftData.git
