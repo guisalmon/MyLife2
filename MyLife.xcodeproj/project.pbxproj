@@ -16,8 +16,10 @@
 		AC3440F71ADFC05600BE57F0 /* MyLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3440F61ADFC05600BE57F0 /* MyLifeTests.swift */; };
 		AC3441011ADFC1C800BE57F0 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = AC3441001ADFC1C800BE57F0 /* .gitignore */; };
 		AC3441031ADFC62F00BE57F0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3441021ADFC62F00BE57F0 /* libsqlite3.dylib */; };
-		AC34410C1ADFD55600BE57F0 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34410B1ADFD55600BE57F0 /* Foo.swift */; };
 		AC34410E1ADFD5FF00BE57F0 /* SD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34410D1ADFD5FF00BE57F0 /* SD.swift */; };
+		AC6DD7C41AE1157C002565D1 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6DD7C31AE1157C002565D1 /* Singleton.swift */; };
+		AC6DD7C61AE134EA002565D1 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6DD7C51AE134EA002565D1 /* Post.swift */; };
+		AC6DD7C81AE1689E002565D1 /* DBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6DD7C71AE1689E002565D1 /* DBHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +47,10 @@
 		AC3441001ADFC1C800BE57F0 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		AC3441021ADFC62F00BE57F0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AC3441041ADFCF3D00BE57F0 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
-		AC34410B1ADFD55600BE57F0 /* Foo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
 		AC34410D1ADFD5FF00BE57F0 /* SD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SD.swift; sourceTree = "<group>"; };
+		AC6DD7C31AE1157C002565D1 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		AC6DD7C51AE134EA002565D1 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		AC6DD7C71AE1689E002565D1 /* DBHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +75,6 @@
 		AC3440CF1ADFC05600BE57F0 = {
 			isa = PBXGroup;
 			children = (
-				AC3441051ADFCF9900BE57F0 /* lib */,
 				AC3441021ADFC62F00BE57F0 /* libsqlite3.dylib */,
 				AC3441001ADFC1C800BE57F0 /* .gitignore */,
 				AC3440DA1ADFC05600BE57F0 /* MyLife */,
@@ -100,8 +103,10 @@
 				AC3440DF1ADFC05600BE57F0 /* MyLife.xcdatamodeld */,
 				AC3440DB1ADFC05600BE57F0 /* Supporting Files */,
 				AC3441041ADFCF3D00BE57F0 /* BridgingHeader.h */,
-				AC34410B1ADFD55600BE57F0 /* Foo.swift */,
 				AC34410D1ADFD5FF00BE57F0 /* SD.swift */,
+				AC6DD7C31AE1157C002565D1 /* Singleton.swift */,
+				AC6DD7C51AE134EA002565D1 /* Post.swift */,
+				AC6DD7C71AE1689E002565D1 /* DBHandler.swift */,
 			);
 			path = MyLife;
 			sourceTree = "<group>";
@@ -129,13 +134,6 @@
 				AC3440F51ADFC05600BE57F0 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AC3441051ADFCF9900BE57F0 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,9 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC34410C1ADFD55600BE57F0 /* Foo.swift in Sources */,
+				AC6DD7C41AE1157C002565D1 /* Singleton.swift in Sources */,
+				AC6DD7C81AE1689E002565D1 /* DBHandler.swift in Sources */,
 				AC3440E31ADFC05600BE57F0 /* ViewController.swift in Sources */,
 				AC3440DE1ADFC05600BE57F0 /* AppDelegate.swift in Sources */,
+				AC6DD7C61AE134EA002565D1 /* Post.swift in Sources */,
 				AC34410E1ADFD5FF00BE57F0 /* SD.swift in Sources */,
 				AC3440E11ADFC05600BE57F0 /* MyLife.xcdatamodeld in Sources */,
 			);

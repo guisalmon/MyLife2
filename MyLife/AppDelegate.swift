@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        
+        Singleton.sharedInstance.db.deleteDb();
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -31,16 +33,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
-        if let err = SD.createTable("Cities", withColumnNamesAndTypes: ["Name": .StringVal, "Population": .IntVal, "IsWarm": .BoolVal, "FoundedIn": .DateVal]) {
-            //there was an error during this function, handle it here
-        } else {
-            //no error, the table was created successfully
-        }
-        
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
+        Singleton.sharedInstance.db.savePost("Title 1", text: "Text 1 ta mère", date: NSDate(), voicepath: "voicepath 1", media: [UIImage]());
+        let (isSuccess, posts) = Singleton.sharedInstance.db.retrievePosts();
+        if isSuccess {
+            for p in posts {
+                NSLog(p.toString());
+            }
+        } else {
+            NSLog("Et merde !");
+        }
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
