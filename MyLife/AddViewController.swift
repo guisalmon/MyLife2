@@ -10,12 +10,14 @@ import Foundation
 import UIKit
 import MobileCoreServices
 
-class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBOutlet weak var titleView: UITextView!
     @IBOutlet weak var dateView: UITextView!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var mediaTableView: UITableView!
+    
     var post: Post!
     var media: [UIImage]!
     var imagePicker: UIImagePickerController!
@@ -69,6 +71,12 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         imagePicker.mediaTypes = [kUTTypeMovie]
         
         presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "mycell")
+        
+        cell.textLabel!.text = post.title
     }
     
 }

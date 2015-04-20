@@ -234,6 +234,7 @@
                     </view>
                     <connections>
                         <outlet property="dateView" destination="QPt-mq-5lH" id="BYk-70-JEO"/>
+                        <outlet property="mediaTableView" destination="Ny4-GE-3e9" id="jgE-Pe-9hN"/>
                         <outlet property="textView" destination="C0f-M8-TYU" id="3RC-wc-H58"/>
                         <outlet property="titleView" destination="lgO-LY-Cdo" id="Y3G-uB-xd3"/>
                     </connections>
