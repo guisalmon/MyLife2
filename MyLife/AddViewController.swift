@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MobileCoreServices
 
 class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -51,12 +52,23 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     }
     
     @IBAction func onGalleryClicked(sender: AnyObject) {
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     @IBAction func onVoiceClicked(sender: AnyObject) {
     }
     
     @IBAction func onVideoClicked(sender: AnyObject) {
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .Camera
+        imagePicker.mediaTypes = [kUTTypeMovie]
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
 }
