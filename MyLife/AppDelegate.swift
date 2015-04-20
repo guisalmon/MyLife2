@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        Singleton.sharedInstance.db.savePost("Title 1", text: "Text 1 ta mère", date: NSDate(), voicepath: "voicepath 1", media: [UIImage]());
+        Singleton.sharedInstance.db.savePost("Title 1", text: "Text 1 with details", date: NSDate(), voicepath: "voicepath 1", media: [UIImage]());
         let (isSuccess, posts) = Singleton.sharedInstance.db.retrievePosts();
         if isSuccess {
             for p in posts {

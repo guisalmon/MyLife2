@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MobileCoreServices
 
-class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITableViewDelegate, UITableViewDataSource {
+class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     @IBOutlet weak var titleView: UITextView!
@@ -77,6 +77,7 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         let cell:UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "mycell")
         
         cell.textLabel!.text = post.title
+        return cell
     }
     
 }
