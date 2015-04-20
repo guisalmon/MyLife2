@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -108,31 +108,6 @@
                                     <constraint firstAttribute="height" constant="213" id="xcM-mh-lU5"/>
                                 </constraints>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAk-65-JLt">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                <color key="barTintColor" red="0.68235296010000002" green="0.11372549830000001" blue="0.96078437569999997" alpha="1" colorSpace="deviceRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Add" id="jia-X7-akS">
-                                        <barButtonItem key="backBarButtonItem" title="Back" id="8vn-lr-cor"/>
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="hxo-Q5-KWa">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="veS-ay-QBQ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Publish" id="ced-tI-ib7">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="onPublishClicked:" destination="1Bd-o8-5vE" id="N5I-i5-DAm"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="aeW-5q-MgT">
                                 <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
                                 <items>
@@ -211,8 +186,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAk-65-JLt">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <color key="barTintColor" red="0.68235296010000002" green="0.11372549830000001" blue="0.96078437569999997" alpha="1" colorSpace="deviceRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Add" id="jia-X7-akS">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="8vn-lr-cor"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="hxo-Q5-KWa">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="veS-ay-QBQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Publish" id="ced-tI-ib7">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="onPublishClicked:" destination="1Bd-o8-5vE" id="N5I-i5-DAm"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="P51-XL-Aed" firstAttribute="centerY" secondItem="QPt-mq-5lH" secondAttribute="centerY" id="0O9-oj-NBI"/>
                             <constraint firstItem="zek-KQ-NvW" firstAttribute="top" secondItem="P51-XL-Aed" secondAttribute="bottom" constant="26" id="0zC-hm-CRo"/>
@@ -242,6 +242,7 @@
                             <constraint firstItem="yAk-65-JLt" firstAttribute="leading" secondItem="Ny4-GE-3e9" secondAttribute="leading" id="wit-Xf-ZhZ"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="dateView" destination="QPt-mq-5lH" id="BYk-70-JEO"/>
                         <outlet property="textView" destination="C0f-M8-TYU" id="3RC-wc-H58"/>
