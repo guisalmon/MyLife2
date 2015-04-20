@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="11" y="433"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="MAI-5c-Pud">
             <objects>
-                <viewController id="1Bd-o8-5vE" sceneMemberID="viewController">
+                <viewController id="1Bd-o8-5vE" customClass="AddViewController" customModule="MyLife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6WY-Fb-HAd"/>
                         <viewControllerLayoutGuide type="bottom" id="BSN-da-TRW"/>
@@ -118,7 +118,11 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" id="veS-ay-QBQ"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Publish" id="ced-tI-ib7"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Publish" id="ced-tI-ib7">
+                                            <connections>
+                                                <action selector="onPublishClicked:" destination="1Bd-o8-5vE" id="N5I-i5-DAm"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -126,26 +130,36 @@
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="g05-yR-T8x"/>
-                                    <barButtonItem image="Camera-25" id="aMm-1W-o7k"/>
+                                    <barButtonItem image="Camera-25" id="aMm-1W-o7k">
+                                        <connections>
+                                            <action selector="onPhotoClicked:" destination="1Bd-o8-5vE" id="5o6-BP-uHl"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="U5j-K9-dSs"/>
-                                    <barButtonItem image="Stack Of Photos-25" id="s5E-31-yDW"/>
+                                    <barButtonItem image="Stack Of Photos-25" id="s5E-31-yDW">
+                                        <connections>
+                                            <action selector="onGalleryClicked:" destination="1Bd-o8-5vE" id="wMb-WB-zOY"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="jKE-lK-uhO"/>
                                     <barButtonItem image="Home-25" id="cpZ-0K-etQ"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="DJv-Ck-kFe"/>
-                                    <barButtonItem image="Micro-25" id="bQV-69-Sms"/>
+                                    <barButtonItem image="Micro-25" id="bQV-69-Sms">
+                                        <connections>
+                                            <action selector="onVoiceClicked:" destination="1Bd-o8-5vE" id="JAr-u1-TAS"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="B2U-CO-WQX"/>
-                                    <barButtonItem image="Video Camera-25" id="ezK-uL-Nac"/>
+                                    <barButtonItem image="Video Camera-25" id="ezK-uL-Nac">
+                                        <connections>
+                                            <action selector="onVideoClicked:" destination="1Bd-o8-5vE" id="kwD-uw-808"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="LbF-JX-A0E"/>
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of the event" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBl-jg-cuN">
                                 <rect key="frame" x="21" y="78" width="141" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P51-XL-Aed">
-                                <rect key="frame" x="130" y="119" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -181,6 +195,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P51-XL-Aed">
+                                <rect key="frame" x="128" y="119" width="36" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -212,6 +232,11 @@
                             <constraint firstItem="QPt-mq-5lH" firstAttribute="trailing" secondItem="lgO-LY-Cdo" secondAttribute="trailing" id="y5v-JO-460"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateView" destination="QPt-mq-5lH" id="BYk-70-JEO"/>
+                        <outlet property="textView" destination="C0f-M8-TYU" id="3RC-wc-H58"/>
+                        <outlet property="titleView" destination="lgO-LY-Cdo" id="Y3G-uB-xd3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkD-t1-Bdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
